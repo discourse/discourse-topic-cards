@@ -35,20 +35,23 @@
   box-shadow: var(--shadow-card);
   border: 1px solid transparent;
 
-  td:first-child {
-    border: 0 !important;
-  }
-
   &:has(.topic-card__thumbnail) {
     max-height: 210px;
   }
 
-  &:hover {
+  &:hover,
+  &.selected {
     cursor: pointer;
     border: 1px solid var(--primary-low);
 
     .title {
       text-decoration: underline;
+    }
+  }
+
+  &.selected {
+    .title {
+      color: var(--quaternary) !important;
     }
   }
 
@@ -98,7 +101,7 @@
     flex-grow: 1;
     padding: 1rem 1.5rem 1rem 0 !important;
     box-sizing: border-box;
-    border: 0 !important;
+    box-shadow: none !important;
 
     .topic-excerpt {
       display: none; //hide default excerpt from pinned topics
@@ -137,6 +140,9 @@
     }
 
     .topic-card {
+      &.selected {
+        //j-k box shadow reimplement
+      }
       &__category {
         grid-area: category;
       }
