@@ -1,8 +1,8 @@
 {
-  "about_url": "TODO: Put your theme's public repo or Meta topic URL here",
-  "license_url": "TODO: Put your theme's LICENSE URL here",
+  "about_url": "https://meta.discourse.org/t/discourse-topic-cards/296048",
+  "license_url": "https://github.com/discourse/discourse-topic-cards/blob/main/LICENSE",
   "assets": {},
-  "name": "Discourse Topic Cards",
+  "name": "Topic Cards",
   "component": true,
   "modifiers": {
     "topic_thumbnail_sizes": [
