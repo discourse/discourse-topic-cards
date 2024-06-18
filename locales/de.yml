@@ -5,3 +5,6 @@
 # https://translate.discourse.org/
 
 de:
+  theme_metadata:
+    description: "Eine Discourse-Komponente zur Anzeige der Themenliste im Kartenformat, mit Vorschaubildern, sofern verfügbar."
+  published: "Veröffentlicht"
