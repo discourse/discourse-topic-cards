@@ -155,6 +155,21 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .number, .d-icon, .activity a {
+          font-weight: bold;
+          font-size: var(--font-down-1-rem);
+        }
+        .right-aligned {
+          margin-left: auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .item {
+            flex-grow: 0;
+            flex-shrink: 1;
+            margin-left: 20px; /* Adjust as necessary for spacing */
+          }
+        }
       }
       &__publish-date {
         font-size: var(--font-down-1-rem);
@@ -173,20 +188,14 @@
         -webkit-box-orient: vertical;
         max-height: 3.3em;
       }
-      &__likes {
-        display: flex;
-        align-items: center;
-        gap: 0.25em;
-        &-number {
-          color: var(--love);
-          font-weight: bold;
-          font-size: var(--font-down-1-rem);
-        }
-
-        .d-icon {
-          color: var(--love);
-        }
-      }
     }
+  }
+}
+
+// remove fixed with and heat color from activity column
+.topic-list .age, .topic-list .activity {
+  width: inherit;
+  a {
+    color: inherit;
   }
 }

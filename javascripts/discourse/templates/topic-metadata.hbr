@@ -4,8 +4,28 @@
     {{format-date view.topic.createdAt format="medium-with-ago"}}
   </span>
 
-  <span class="topic-card__likes">
-    <span class="topic-card__likes-number">{{view.topic.like_count}}</span>
-    {{d-icon "heart"}}
-  </span>
+  <div class="right-aligned item">
+    <span class="topic-card__views">
+      {{d-icon "eye"}}
+      <span class="number">
+        {{view.topic.views}}
+      </span>
+    </span>
+
+    <span class="topic-card__likes item">
+      {{d-icon "heart"}}
+      <span class="number">
+        {{view.topic.like_count}}
+      </span>
+    </span>
+
+    <span class="topic-card__reply_count item">
+      {{d-icon "comment"}}
+      <span class="number">
+        {{view.replyCount}}
+      </span>
+    </span>
+
+    {{raw "list/activity-column" topic=view.topic class="topic-card-data-activity item" tagName="div"}}
+  </div>
 </div>
