@@ -22,7 +22,7 @@
     <span class="topic-card__reply_count item">
       {{d-icon "comment"}}
       <span class="number">
-        {{view.replyCount}}
+        {{view.topic.replyCount}}
       </span>
     </span>
 
