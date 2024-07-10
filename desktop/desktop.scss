@@ -1,0 +1,3 @@
+.topic-card:has(.topic-card__thumbnail).has-max-height {
+  max-height: #{$card-max-height}px;
+}

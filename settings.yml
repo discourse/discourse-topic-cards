@@ -1,0 +1,9 @@
+set_card_max_height:
+  type: bool
+  default: true
+  description: "Set max height for the topic cards. If unset, the cards will grow to the height of the image rendering."
+
+card_max_height:
+  type: integer
+  default: 275
+  description: "The maximum height for the topic cards. Only used if set_max_height is true. Default is 275px."
