@@ -1,31 +1,41 @@
 <div class="topic-card__metadata">
-  <span class="topic-card__publish-date">
-    {{theme-i18n "published"}}
-    {{format-date view.topic.createdAt format="medium-with-ago"}}
-  </span>
+  {{#if (theme-setting 'show_publish_date')}}
+    <span class="topic-card__publish-date">
+      {{theme-i18n "published"}}
+      {{format-date view.topic.createdAt format="medium-with-ago"}}
+    </span>
+  {{/if}}
 
   <div class="right-aligned item">
-    <span class="topic-card__views">
-      {{d-icon "eye"}}
-      <span class="number">
-        {{view.topic.views}}
+    {{#if (theme-setting 'show_views')}}
+      <span class="topic-card__views">
+        {{d-icon "eye"}}
+        <span class="number">
+          {{view.topic.views}}
+        </span>
       </span>
-    </span>
+    {{/if}}
 
-    <span class="topic-card__likes item">
-      {{d-icon "heart"}}
-      <span class="number">
-        {{view.topic.like_count}}
+    {{#if (theme-setting 'show_likes')}}
+      <span class="topic-card__likes item">
+        {{d-icon "heart"}}
+        <span class="number">
+          {{view.topic.like_count}}
+        </span>
       </span>
-    </span>
+    {{/if}}
 
-    <span class="topic-card__reply_count item">
-      {{d-icon "comment"}}
-      <span class="number">
-        {{view.topic.replyCount}}
+    {{#if (theme-setting 'show_reply_count')}}
+      <span class="topic-card__reply_count item">
+        {{d-icon "comment"}}
+        <span class="number">
+          {{view.topic.replyCount}}
+        </span>
       </span>
-    </span>
+    {{/if}}
 
-    {{raw "list/activity-column" topic=view.topic class="topic-card-data-activity item" tagName="div"}}
+    {{#if (theme-setting 'show_activity')}}
+      {{raw "list/activity-column" topic=view.topic class="topic-card-data-activity item" tagName="div"}}
+    {{/if}}
   </div>
 </div>

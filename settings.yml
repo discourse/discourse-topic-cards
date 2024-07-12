@@ -1,0 +1,20 @@
+show_likes:
+  type: bool
+  default: true
+  description: Show likes on topic card
+show_views:
+  type: bool
+  default: false
+  description: Show views on topic card
+show_reply_count:
+  type: bool
+  default: false
+  description: Show reply count on topic card
+show_activity:
+  type: bool
+  default: false
+  description: Show activity on topic card
+show_publish_date:
+  type: bool
+  default: true
+  description: Show publish date on topic card
