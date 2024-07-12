@@ -35,10 +35,6 @@
   box-shadow: var(--shadow-card);
   border: 1px solid transparent;
 
-  &:has(.topic-card__thumbnail) {
-    max-height: 210px;
-  }
-
   &:hover,
   &.selected {
     cursor: pointer;

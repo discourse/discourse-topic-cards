@@ -7,13 +7,18 @@ export default {
   },
 
   initWithApi(api) {
+    const setCardMaxHeight = settings.set_card_max_height;
+    const classNames = ["topic-card"];
+    if (setCardMaxHeight) {
+      classNames.push("has-max-height");
+    }
     api.modifyClass("component:topic-list", {
       pluginId: "discourse-topic-list-cards",
       classNames: "topic-cards-list",
     });
     api.modifyClass("component:topic-list-item", {
       pluginId: "discourse-topic-list-cards",
-      classNames: "topic-card",
+      classNames: classNames.join(" "),
     });
   },
 };
