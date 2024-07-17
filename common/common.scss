@@ -151,7 +151,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .number, .d-icon, .activity a {
+        .number,
+        .d-icon,
+        .activity a {
           font-weight: bold;
           font-size: var(--font-down-1-rem);
         }
@@ -164,6 +166,12 @@
             flex-grow: 0;
             flex-shrink: 1;
             margin-left: 20px; /* Adjust as necessary for spacing */
+            &.topic-card__likes:first-child:last-child {
+              color: var(--love);
+              .d-icon {
+                color: var(--love);
+              }
+            }
           }
         }
       }
@@ -189,7 +197,8 @@
 }
 
 // remove fixed with and heat color from activity column
-.topic-list .age, .topic-list .activity {
+.topic-list .age,
+.topic-list .activity {
   width: inherit;
   a {
     color: inherit;

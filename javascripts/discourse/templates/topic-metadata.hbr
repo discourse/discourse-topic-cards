@@ -6,9 +6,9 @@
     </span>
   {{/if}}
 
-  <div class="right-aligned item">
+  <div class="right-aligned">
     {{#if (theme-setting 'show_views')}}
-      <span class="topic-card__views">
+      <span class="topic-card__views item">
         {{d-icon "eye"}}
         <span class="number">
           {{view.topic.views}}
