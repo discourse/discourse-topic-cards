@@ -1,4 +1,12 @@
 en:
   theme_metadata:
     description: "A dicourse component to display the topic list in card format, with thumbnails where available."
+    settings:
+      show_likes: "Show likes on topic card"
+      show_views: "Show views on topic card"
+      show_reply_count: "Show reply count on topic card"
+      show_activity: "Show activity on topic card"
+      show_publish_date: "Show publish date on topic card"
+      set_card_max_height: "Set max height for the topic cards. If unset, the cards will grow to the height of the image rendering."
+      card_max_height: "The maximum height for the topic cards. Only used if set_max_height is true. Default is 275px."
   published: "Published"

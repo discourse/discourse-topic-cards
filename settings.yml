@@ -1,28 +1,21 @@
 show_likes:
   type: bool
   default: true
-  description: Show likes on topic card
 show_views:
   type: bool
   default: false
-  description: Show views on topic card
 show_reply_count:
   type: bool
   default: false
-  description: Show reply count on topic card
 show_activity:
   type: bool
   default: false
-  description: Show activity on topic card
 show_publish_date:
   type: bool
   default: true
-  description: Show publish date on topic card
 set_card_max_height:
   type: bool
   default: true
-  description: "Set max height for the topic cards. If unset, the cards will grow to the height of the image rendering."
 card_max_height:
   type: integer
   default: 275
-  description: "The maximum height for the topic cards. Only used if set_max_height is true. Default is 275px."
