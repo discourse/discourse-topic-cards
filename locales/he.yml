@@ -5,3 +5,14 @@
 # https://translate.discourse.org/
 
 he:
+  theme_metadata:
+    description: "רכיב discourse להצגת רשימת הנושאים בתבנית של כרטיס, עם תמונות ממוזערות איפה שניתן."
+    settings:
+      show_likes: "הצגת לייקים בכרטיס הנושא"
+      show_views: "הצגת צפיות בכרטיס הנושא"
+      show_reply_count: "הצגת כמות תגובות בכרטיס הנושא"
+      show_activity: "הצגת פעילות בכרטיס הנושא שלך"
+      show_publish_date: "הצגת תאריך פרסום בכרטיס הנושא"
+      set_card_max_height: "הגדרת גובה מרבי לכרטיסי נושאים. אם לא הוגדר, הכרטיסים יוגדלו לגובה התמונה המעובדת."
+      card_max_height: "הגובה המרבי לכרטיסי הנושא. בשימוש רק אם set_max_height (הגדרות גובה מרבי) הוא חיובי. ברירת המחדל היא 275 פיקסלים."
+  published: "מפורסם"
