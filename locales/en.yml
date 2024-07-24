@@ -8,5 +8,5 @@ en:
       show_activity: "Show activity on topic card"
       show_publish_date: "Show publish date on topic card"
       set_card_max_height: "Set max height for the topic cards. If unset, the cards will grow to the height of the image rendering."
-      card_max_height: "The maximum height for the topic cards. Only used if set_max_height is true. Default is 275px."
+      card_max_height: "The maximum height for the topic cards. Only used if set_card_max_height is true. Default is 275px."
   published: "Published"
