@@ -5,3 +5,14 @@
 # https://translate.discourse.org/
 
 ja:
+  theme_metadata:
+    description: "トピックリストをカード形式で表示する Discourse コンポーネントです。利用できる場合はサムネイル付きで表示します。"
+    settings:
+      show_likes: "トピックカードに「いいね！」を表示する"
+      show_views: "トピックカードにビュー数を表示する"
+      show_reply_count: "トピックカードに返信数を表示する"
+      show_activity: "トピックカードにアクティビティを表示する"
+      show_publish_date: "トピックカードに公開日を表示する"
+      set_card_max_height: "トピックカードの最大の高さを設定する。未設定の場合は、カードは画像レンダリングの高さまで拡大されます。"
+      card_max_height: "トピックカードの最大の高さ。set_card_max_heigh が true の場合にのみ使用されます。デフォルトは 275px です。"
+  published: "公開中"

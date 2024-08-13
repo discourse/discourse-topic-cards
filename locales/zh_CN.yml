@@ -5,3 +5,14 @@
 # https://translate.discourse.org/
 
 zh_CN:
+  theme_metadata:
+    description: "一个 Dicourse 组件，用于以卡片格式显示话题列表，并在可用时提供缩略图。"
+    settings:
+      show_likes: "在话题卡片上显示赞数"
+      show_views: "在话题卡片上显示浏览次数"
+      show_reply_count: "在话题卡片上显示回复数"
+      show_activity: "在话题卡片上显示活动"
+      show_publish_date: "在话题卡片上显示发布日期"
+      set_card_max_height: "设置话题卡片的最大高度。如果不设置，卡片将增长到图片渲染的高度。"
+      card_max_height: "话题卡片的最大高度。仅当 set_card_max_height 为真时才能使用。默认值为 275px。"
+  published: "发布日期"

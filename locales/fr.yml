@@ -5,3 +5,14 @@
 # https://translate.discourse.org/
 
 fr:
+  theme_metadata:
+    description: "Un composant de Discourse pour afficher la liste des sujets au format carte, avec des vignettes lorsqu'elles sont disponibles."
+    settings:
+      show_likes: "Afficher les mentions « J'aime » sur la carte du sujet"
+      show_views: "Afficher les vues sur la carte du sujet"
+      show_reply_count: "Afficher le nombre de réponses sur la carte du sujet"
+      show_activity: "Afficher l'activité sur la carte du sujet"
+      show_publish_date: "Afficher la date de publication sur la carte du sujet"
+      set_card_max_height: "Définir la hauteur maximale pour les cartes de sujets. Si elle n'est pas définie, la taille des cartes augmentera jusqu'à la hauteur du rendu de l'image."
+      card_max_height: "La hauteur maximale pour les cartes de sujets. Option utilisée uniquement si la valeur set_card_max_height est vraie. La valeur par défaut est de 275px."
+  published: "Publié"

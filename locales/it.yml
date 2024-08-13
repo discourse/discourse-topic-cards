@@ -5,3 +5,14 @@
 # https://translate.discourse.org/
 
 it:
+  theme_metadata:
+    description: "Un componente di Discourse per visualizzare l'elenco degli argomenti in formato scheda, con miniature ove disponibili."
+    settings:
+      show_likes: "Mostra Mi piace sulla scheda argomento"
+      show_views: "Mostra visualizzazioni sulla scheda argomento"
+      show_reply_count: "Mostra il conteggio delle risposte sulla scheda argomento"
+      show_activity: "Mostra attività sulla scheda argomento"
+      show_publish_date: "Mostra la data di pubblicazione sulla scheda argomento"
+      set_card_max_height: "Imposta l'altezza massima per le schede argomento. Se non è impostata, le schede avranno l'altezza del rendering dell'immagine."
+      card_max_height: "L'altezza massima per le schede argomento. Utilizzato solo se set_card_max_height è true. Il valore predefinito è 275px."
+  published: "Pubblicato"

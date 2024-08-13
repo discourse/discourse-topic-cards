@@ -5,3 +5,14 @@
 # https://translate.discourse.org/
 
 es:
+  theme_metadata:
+    description: "Un componente de Dicourse para mostrar la lista de temas en formato tarjeta, con miniaturas cuando estén disponibles."
+    settings:
+      show_likes: "Mostrar los «me gusta» en la tarjeta del tema"
+      show_views: "Mostrar las vistas en la tarjeta del tema"
+      show_reply_count: "Mostrar el número de respuestas en la tarjeta del tema"
+      show_activity: "Mostrar la actividad en la tarjeta del tema"
+      show_publish_date: "Mostrar la fecha de publicación en la tarjeta del tema"
+      set_card_max_height: "Establece la altura máxima de las tarjetas del tema. Si no se establece, las tarjetas crecerán hasta la altura de la representación de la imagen."
+      card_max_height: "La altura máxima de las tarjetas del tema. Solo se utiliza si set_card_max_height es true. Por defecto es 275px."
+  published: "Publicado"
