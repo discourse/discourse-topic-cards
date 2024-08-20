@@ -1,6 +1,6 @@
 en:
   theme_metadata:
-    description: "A dicourse component to display the topic list in card format, with thumbnails where available."
+    description: "A Discourse component to display the topic list in card format, with thumbnails where available."
     settings:
       show_likes: "Show likes on topic card"
       show_views: "Show views on topic card"
