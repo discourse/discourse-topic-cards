@@ -5,3 +5,14 @@
 # https://translate.discourse.org/
 
 pt_BR:
+  theme_metadata:
+    description: "Componente do Discourse usado para exibir a lista de tópicos em forma de cartão, com miniaturas onde estiverem disponíveis."
+    settings:
+      show_likes: "Exibir curtidas no cartão do tópico"
+      show_views: "Exibir visualizações no cartão do tópico"
+      show_reply_count: "Exibir contagem de respostas no cartão do tópico"
+      show_activity: "Exibir atividade no cartão do tópico"
+      show_publish_date: "Exibir data de publicação no cartão do tópico"
+      set_card_max_height: "Defina a altura máxima para cartões de tópico. Se esta configuração não for definida, os cartões terão a altura da imagem renderizada."
+      card_max_height: "Altura máxima para cartões de tópico. Use apenas se set_card_max_height for verdadeiro. O padrão é 275 px."
+  published: "Publicado(a)"

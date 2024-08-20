@@ -5,3 +5,14 @@
 # https://translate.discourse.org/
 
 tr_TR:
+  theme_metadata:
+    description: "Konu listesini kart formatında, varsa küçük resimlerle birlikte göstermek için bir discourse bileşeni."
+    settings:
+      show_likes: "Konu kartındaki beğenileri göster"
+      show_views: "Konu kartındaki görüntülemeleri göster"
+      show_reply_count: "Konu kartında yanıt sayısını göster"
+      show_activity: "Konu kartındaki aktiviteyi göster"
+      show_publish_date: "Konu kartındaki yayın tarihini göster"
+      set_card_max_height: "Konu kartları için maksimum yüksekliği ayarlayın. Ayarlanmadığında, kartlar görüntü oluşturma yüksekliğine kadar büyür."
+      card_max_height: "Konu kartları için maksimum yükseklik. Yalnızca set_card_max_height true ise kullanılır. Varsayılan 275 pikseldir."
+  published: "Yayınlandı"
