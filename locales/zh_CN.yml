@@ -6,7 +6,6 @@
 
 zh_CN:
   theme_metadata:
-    description: "一个 Dicourse 组件，用于以卡片格式显示话题列表，并在可用时提供缩略图。"
     settings:
       show_likes: "在话题卡片上显示赞数"
       show_views: "在话题卡片上显示浏览次数"

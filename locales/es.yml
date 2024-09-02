@@ -6,7 +6,6 @@
 
 es:
   theme_metadata:
-    description: "Un componente de Dicourse para mostrar la lista de temas en formato tarjeta, con miniaturas cuando estén disponibles."
     settings:
       show_likes: "Mostrar los «me gusta» en la tarjeta del tema"
       show_views: "Mostrar las vistas en la tarjeta del tema"

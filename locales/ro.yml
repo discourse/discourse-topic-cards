@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 ro:
+  theme_metadata:
+    description: "O componentă Discourse pentru afișarea listei de subiecte în format card, cu miniaturi acolo unde sunt disponibile."

@@ -6,7 +6,6 @@
 
 pt_BR:
   theme_metadata:
-    description: "Componente do Discourse usado para exibir a lista de tópicos em forma de cartão, com miniaturas onde estiverem disponíveis."
     settings:
       show_likes: "Exibir curtidas no cartão do tópico"
       show_views: "Exibir visualizações no cartão do tópico"

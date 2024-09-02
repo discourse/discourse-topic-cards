@@ -6,7 +6,6 @@
 
 fr:
   theme_metadata:
-    description: "Un composant de Discourse pour afficher la liste des sujets au format carte, avec des vignettes lorsqu'elles sont disponibles."
     settings:
       show_likes: "Afficher les mentions « J'aime » sur la carte du sujet"
       show_views: "Afficher les vues sur la carte du sujet"
