@@ -6,6 +6,7 @@
 
 nl:
   theme_metadata:
+    description: "Een Discourse-component om de topicslijst in kaartformaat weer te geven, met miniaturen waar beschikbaar."
     settings:
       show_likes: "Likes weergegen op topickaart"
       show_views: "Weergaven weergeven op topickaart"

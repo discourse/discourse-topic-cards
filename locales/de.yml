@@ -6,6 +6,7 @@
 
 de:
   theme_metadata:
+    description: "Eine Discourse-Komponente zur Anzeige der Themenliste im Kartenformat mit Vorschaubildern, sofern verfügbar."
     settings:
       show_likes: "„Gefällt mir“-Angaben auf der Themenkarte anzeigen"
       show_views: "Aufrufe auf der Themenkarte anzeigen"

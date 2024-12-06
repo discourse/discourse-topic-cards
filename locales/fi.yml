@@ -6,6 +6,7 @@
 
 fi:
   theme_metadata:
+    description: "Discourse-komponentti, joka näyttää ketjuluettelon korttimuodossa, jossa esikatselukuvat ovat käytettävissä."
     settings:
       show_likes: "Näytä tykkäykset ketjukortissa"
       show_views: "Näytä katselut ketjukortissa"

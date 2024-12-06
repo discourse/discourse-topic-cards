@@ -6,6 +6,7 @@
 
 it:
   theme_metadata:
+    description: "Un componente di Discourse per visualizzare l'elenco degli argomenti in formato scheda, con miniature ove disponibili."
     settings:
       show_likes: "Mostra Mi piace sulla scheda argomento"
       show_views: "Mostra visualizzazioni sulla scheda argomento"

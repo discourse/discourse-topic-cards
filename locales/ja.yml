@@ -6,6 +6,7 @@
 
 ja:
   theme_metadata:
+    description: "トピックリストをカード形式で表示する Discourse コンポーネントです。利用できる場合はサムネイル付きで表示します。"
     settings:
       show_likes: "トピックカードに「いいね！」を表示する"
       show_views: "トピックカードにビュー数を表示する"

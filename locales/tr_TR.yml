@@ -6,6 +6,7 @@
 
 tr_TR:
   theme_metadata:
+    description: "Konu listesini kart formatında, varsa küçük resimlerle birlikte göstermek için bir Discourse bileşeni."
     settings:
       show_likes: "Konu kartındaki beğenileri göster"
       show_views: "Konu kartındaki görüntülemeleri göster"
