@@ -1,3 +1,4 @@
+import ActivityCell from "discourse/components/topic-list/item/activity-cell";
 import formatDate from "discourse/helpers/format-date";
 import dIcon from "discourse-common/helpers/d-icon";
 import { i18n } from "discourse-i18n";
@@ -39,9 +40,11 @@ const TopicMetadata = <template>
         </span>
       {{/if}}
 
-<!--      {{#if settings.show_activity}}-->
-<!--        {{raw "list/activity-column" topic=@topic class="topic-card-data-activity item" tagName="div"}}-->
-<!--      {{/if}}-->
+      {{#if settings.show_activity}}
+        <div class="topic-card__activity item">
+          <ActivityCell @topic={{@topic}} />
+        </div>
+      {{/if}}
     </div>
   </div>
 </template>;

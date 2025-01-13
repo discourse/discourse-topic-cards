@@ -114,7 +114,6 @@
 
     .title {
       font-weight: bold;
-      padding: 0;
       //limit title to 2 lines
       line-height: 1.4em;
       overflow: hidden;
@@ -191,6 +190,16 @@
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         max-height: 3.3em;
+      }
+      &__activity {
+        .num.activity {
+          display: block;
+          padding: 0;
+
+          a {
+            padding: 0;
+          }
+        }
       }
     }
   }

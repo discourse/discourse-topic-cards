@@ -19,7 +19,9 @@ export default class TopicThumbnail extends Component {
 
     this.responsiveRatios.forEach((ratio) => {
       const target = ratio * this.displayWidth;
-      const match = this.topic.thumbnails.find((t) => t.url && t.max_width === target);
+      const match = this.topic.thumbnails.find(
+        (t) => t.url && t.max_width === target
+      );
       if (match) {
         srcSetArray.push(`${match.url} ${ratio}x`);
       }
@@ -73,18 +75,18 @@ export default class TopicThumbnail extends Component {
 
   <template>
     <td class={{if this.hasThumbnail "topic-card__thumbnail" "no-thumbnail"}}>
-      <a href="{{this.url}}">
+      <a href={{this.url}}>
         {{#if this.hasThumbnail}}
           <img
             class="main-thumbnail"
-            src="{{this.fallbackSrc}}"
-            srcset="{{this.srcSet}}"
+            src={{this.fallbackSrc}}
+            srcset={{this.srcSet}}
             width={{this.width}}
             height={{this.height}}
             loading="lazy"
-          >
+          />
         {{/if}}
       </a>
     </td>
   </template>
-};
+}
