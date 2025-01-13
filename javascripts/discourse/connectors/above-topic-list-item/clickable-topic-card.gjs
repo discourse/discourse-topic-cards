@@ -1,5 +1,7 @@
 import Component from "@glimmer/component";
 import { action } from "@ember/object";
+import didInsert from "@ember/render-modifiers/modifiers/did-insert";
+import willDestroy from "@ember/render-modifiers/modifiers/will-destroy";
 import { service } from "@ember/service";
 import { navigateToTopic } from "discourse/components/topic-list-item";
 import { wantsNewWindow } from "discourse/lib/intercept-click";
@@ -28,7 +30,7 @@ export default class extends Component {
       clickTargets.push("topic-item-metadata");
     }
 
-    if (clickTargets.some((t) => targetElement.classList.contains(t))) {
+    if (clickTargets.some((t) => targetElement.closest(`.${t}`))) {
       if (wantsNewWindow(event)) {
         return true;
       }
@@ -45,4 +47,12 @@ export default class extends Component {
   removeClickHandler(element) {
     element.parentElement.removeEventListener("click", this.clickHandler);
   }
+
+  <template>
+    <div
+      class="hidden"
+      {{didInsert this.registerClickHandler}}
+      {{willDestroy this.removeClickHandler}}
+    ></div>
+  </template>
 }
