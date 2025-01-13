@@ -4,6 +4,7 @@ import TopicThumbnail from "../components/topic-thumbnail";
 
 export default {
   name: "discourse-topic-list-cards",
+
   initialize() {
     withPluginApi("1.39.0", (api) => this.initWithApi(api));
   },
@@ -30,11 +31,20 @@ export default {
       }
     );
 
-    api.renderBeforeWrapperOutlet("topic-list-data-mobile", TopicTagsMobile);
-    api.renderBeforeWrapperOutlet("topic-list-data-mobile", TopicThumbnail);
+    const { mobileView } = api.container.lookup("service:site");
 
+    api.registerValueTransformer("topic-list-item-mobile-layout", () => false);
     api.registerValueTransformer("topic-list-columns", ({ value: columns }) => {
       columns.add("thumbnail", { item: TopicThumbnail }, { before: "topic" });
+
+      if (mobileView) {
+        columns.add(
+          "tags-mobile",
+          { item: TopicTagsMobile },
+          { before: "thumbnail" }
+        );
+      }
+
       return columns;
     });
   },

@@ -1,6 +1,5 @@
 import Component from "@glimmer/component";
 import { computed } from "@ember/object";
-import element from "discourse/helpers/element";
 
 export default class TopicThumbnail extends Component {
   responsiveRatios = [1, 1.5, 2];
@@ -72,12 +71,8 @@ export default class TopicThumbnail extends Component {
       : this.topic.get("lastUnreadUrl");
   }
 
-  get WrapperElement() {
-    return element(this.args.outletArgs?.useMobileLayout ? "div" : "td");
-  }
-
   <template>
-    <this.WrapperElement class={{if this.hasThumbnail "topic-card__thumbnail" "no-thumbnail"}}>
+    <td class={{if this.hasThumbnail "topic-card__thumbnail" "no-thumbnail"}}>
       <a href="{{this.url}}">
         {{#if this.hasThumbnail}}
           <img
@@ -90,6 +85,6 @@ export default class TopicThumbnail extends Component {
           >
         {{/if}}
       </a>
-    </this.WrapperElement>
+    </td>
   </template>
 };
