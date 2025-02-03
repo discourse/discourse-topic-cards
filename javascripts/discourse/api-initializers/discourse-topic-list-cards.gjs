@@ -1,3 +1,4 @@
+import Component from "@glimmer/component";
 import { eq } from "truth-helpers";
 import bodyClass from "discourse/helpers/body-class";
 import { apiInitializer } from "discourse/lib/api";
@@ -13,11 +14,20 @@ export default apiInitializer("1.39.0", (api) => {
   const site = api.container.lookup("service:site");
 
   api.renderInOutlet("above-topic-list-item", ClickableTopicCard);
-  api.renderInOutlet("topic-list-main-link-bottom", <template>
-    <TopicOp @topic={{@outletArgs.topic}} />
-    <TopicExcerpt @topic={{@outletArgs.topic}} />
-    <TopicMetadata @topic={{@outletArgs.topic}} />
-  </template>);
+  api.renderInOutlet(
+    "topic-list-main-link-bottom",
+    class extends Component {
+      static shouldRender(args, context) {
+        return context.siteSettings.glimmer_topic_list_mode !== "disabled";
+      }
+
+      <template>
+        <TopicOp @topic={{@outletArgs.topic}} />
+        <TopicExcerpt @topic={{@outletArgs.topic}} />
+        <TopicMetadata @topic={{@outletArgs.topic}} />
+      </template>
+    }
+  );
 
   api.registerValueTransformer(
     "topic-list-class",
