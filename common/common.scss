@@ -189,9 +189,7 @@
             }
           }
           &:disabled {
-            // opacity: 0.4;
             cursor: not-allowed;
-
             &:hover {
               background-color: unset;
               color: unset;
