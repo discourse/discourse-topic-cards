@@ -91,7 +91,11 @@ export default class LikeToggle extends Component {
       }}
       class={{concatClass (if this.likeToggled "--liked") "topic__like-button"}}
     >
-      {{icon "d-unliked"}}
+      {{#if this.likeToggled}}
+        {{icon "heart"}}
+      {{else}}
+        {{icon "d-unliked"}}
+      {{/if}}
       {{#if (notEq this.likeCount 0)}}
         {{number this.likeCount}}
       {{/if}}
