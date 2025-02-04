@@ -10,3 +10,8 @@ en:
       set_card_max_height: "Set max height for the topic cards. If unset, the cards will grow to the height of the image rendering."
       card_max_height: "The maximum height for the topic cards. Only used if set_card_max_height is true. Default is 275px."
   published: "Published"
+  like_toggle:
+    like: "Like"
+    like_disabled: "You cannot like this post."
+    cannot_like_topic: "Sorry, you can't remove that like."
+    cannot_remove_like: "Sorry, you can't like that topic."

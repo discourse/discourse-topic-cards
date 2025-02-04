@@ -1,6 +1,7 @@
 import ActivityCell from "discourse/components/topic-list/item/activity-cell";
 import formatDate from "discourse/helpers/format-date";
 import dIcon from "discourse-common/helpers/d-icon";
+import LikeToggle from "./like-toggle";
 import { i18n } from "discourse-i18n";
 
 const TopicMetadata = <template>
@@ -24,10 +25,7 @@ const TopicMetadata = <template>
 
       {{#if settings.show_likes}}
         <span class="topic-card__likes item">
-          {{dIcon "heart"}}
-          <span class="number">
-            {{@topic.like_count}}
-          </span>
+          <LikeToggle @topic={{@topic}} />
         </span>
       {{/if}}
 
