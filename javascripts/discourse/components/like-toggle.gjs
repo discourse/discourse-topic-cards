@@ -1,6 +1,5 @@
 import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
-import { get } from "@ember/helper";
 import { on } from "@ember/modifier";
 import { action } from "@ember/object";
 import { debounce } from "@ember/runloop";
@@ -11,14 +10,15 @@ import number from "discourse/helpers/number";
 import { ajax } from "discourse/lib/ajax";
 import icon from "discourse-common/helpers/d-icon";
 import i18n from "discourse-common/helpers/i18n";
+import I18n from "I18n";
 
 export default class LikeToggle extends Component {
   @service currentUser;
   @service dialog;
 
-  @tracked likeToggled = this.args.topic.liked;
   @tracked likeCount = this.args.topic.like_count;
-  @tracked canLike = this.args.topic.op_can_like;
+  @tracked canLike = this.args.topic.op_can_like || false;
+  @tracked likeToggled = this.args.topic.op_liked || false;
   @tracked loading = false;
   clickCounter = 0;
 
@@ -83,7 +83,7 @@ export default class LikeToggle extends Component {
     <button
       {{on "click" this.toggleLikeDebounced}}
       type="button"
-      disabled={{ (eq this.canLike false) }}
+      disabled={{eq this.canLike false}}
       title={{if
         (eq this.canLike false)
         (i18n (themePrefix "like_toggle.like_disabled"))
@@ -91,7 +91,11 @@ export default class LikeToggle extends Component {
       }}
       class={{concatClass (if this.likeToggled "--liked") "topic__like-button"}}
     >
-      {{icon "d-unliked"}}
+      {{#if this.likeToggled}}
+        {{icon "heart"}}
+      {{else}}
+        {{icon "d-unliked"}}
+      {{/if}}
       {{#if (notEq this.likeCount 0)}}
         {{number this.likeCount}}
       {{/if}}

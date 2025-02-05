@@ -1,8 +1,8 @@
 import ActivityCell from "discourse/components/topic-list/item/activity-cell";
 import formatDate from "discourse/helpers/format-date";
 import dIcon from "discourse-common/helpers/d-icon";
-import LikeToggle from "./like-toggle";
 import { i18n } from "discourse-i18n";
+import LikeToggle from "./like-toggle";
 
 const TopicMetadata = <template>
   <div class="topic-card__metadata">
