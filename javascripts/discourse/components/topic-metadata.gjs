@@ -1,6 +1,6 @@
 import ActivityCell from "discourse/components/topic-list/item/activity-cell";
+import dIcon from "discourse/helpers/d-icon";
 import formatDate from "discourse/helpers/format-date";
-import dIcon from "discourse-common/helpers/d-icon";
 import { i18n } from "discourse-i18n";
 
 const TopicMetadata = <template>

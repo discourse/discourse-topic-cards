@@ -4,8 +4,8 @@ import didInsert from "@ember/render-modifiers/modifiers/did-insert";
 import willDestroy from "@ember/render-modifiers/modifiers/will-destroy";
 import { service } from "@ember/service";
 import { navigateToTopic } from "discourse/components/topic-list-item";
+import { bind } from "discourse/lib/decorators";
 import { wantsNewWindow } from "discourse/lib/intercept-click";
-import { bind } from "discourse-common/utils/decorators";
 
 export default class extends Component {
   @service site;

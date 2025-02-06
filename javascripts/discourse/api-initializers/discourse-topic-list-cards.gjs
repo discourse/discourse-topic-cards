@@ -2,7 +2,7 @@ import Component from "@glimmer/component";
 import { eq } from "truth-helpers";
 import bodyClass from "discourse/helpers/body-class";
 import { apiInitializer } from "discourse/lib/api";
-import { withSilencedDeprecations } from "discourse-common/lib/deprecated";
+import { withSilencedDeprecations } from "discourse/lib/deprecated";
 import ClickableTopicCard from "../components/clickable-topic-card";
 import TopicExcerpt from "../components/topic-excerpt";
 import TopicMetadata from "../components/topic-metadata";
