@@ -6,19 +6,19 @@ import { debounce } from "@ember/runloop";
 import { service } from "@ember/service";
 import { eq, notEq } from "truth-helpers";
 import concatClass from "discourse/helpers/concat-class";
+import icon from "discourse/helpers/d-icon";
 import number from "discourse/helpers/number";
 import { ajax } from "discourse/lib/ajax";
-import icon from "discourse-common/helpers/d-icon";
-import i18n from "discourse-common/helpers/i18n";
-import I18n from "I18n";
+import { i18n } from "discourse-i18n";
 
 export default class LikeToggle extends Component {
   @service currentUser;
   @service dialog;
 
   @tracked likeCount = this.args.topic.like_count;
+  @tracked liked = this.args.topic.op_liked || false;
   @tracked canLike = this.args.topic.op_can_like || false;
-  @tracked likeToggled = this.args.topic.op_liked || false;
+  @tracked firstPostId = this.args.topic.first_post_id || false;
   @tracked loading = false;
   clickCounter = 0;
 
@@ -31,8 +31,8 @@ export default class LikeToggle extends Component {
     }
 
     this.clickCounter++;
-    this.likeToggled = !this.likeToggled;
-    this.likeCount += this.likeToggled ? 1 : -1;
+    this.liked = !this.liked;
+    this.likeCount += this.liked ? 1 : -1;
     debounce(this, this.performToggleLike, 1000); // 1s delay
   }
 
@@ -45,33 +45,27 @@ export default class LikeToggle extends Component {
     this.loading = true;
 
     try {
-      const topicPosts = await ajax(`/t/${this.args.topic.id}/post_ids.json`);
-
-      if (topicPosts?.post_ids.length) {
-        const firstPost = topicPosts.post_ids[0];
-
-        if (firstPost) {
-          if (!this.likeToggled) {
-            await ajax(`/post_actions/${firstPost}`, {
-              type: "DELETE",
-              data: { post_action_type_id: 2 },
-            });
-          } else {
-            await ajax(`/post_actions`, {
-              type: "POST",
-              data: { id: firstPost, post_action_type_id: 2 },
-            });
-          }
+      if (this.firstPostId) {
+        if (!this.liked) {
+          await ajax(`/post_actions/${this.firstPostId}`, {
+            type: "DELETE",
+            data: { post_action_type_id: 2 },
+          });
+        } else {
+          await ajax(`/post_actions`, {
+            type: "POST",
+            data: { id: this.firstPostId, post_action_type_id: 2 },
+          });
         }
       }
     } catch {
       // Rollback UI changes in case of an error
-      this.likeToggled = !this.likeToggled;
-      this.likeCount += this.likeToggled ? 1 : -1;
+      this.liked = !this.liked;
+      this.likeCount += this.liked ? 1 : -1;
       this.dialog.alert(
-        this.likeToggled
-          ? I18n.t(themePrefix("like_toggle.cannot_like_topic"))
-          : I18n.t(themePrefix("like_toggle.cannot_remove_like"))
+        this.liked
+          ? i18n(themePrefix("like_toggle.cannot_like_topic"))
+          : i18n(themePrefix("like_toggle.cannot_remove_like"))
       );
     } finally {
       this.loading = false;
@@ -89,9 +83,9 @@ export default class LikeToggle extends Component {
         (i18n (themePrefix "like_toggle.like_disabled"))
         (i18n (themePrefix "like_toggle.like"))
       }}
-      class={{concatClass (if this.likeToggled "--liked") "topic__like-button"}}
+      class={{concatClass (if this.liked "--liked") "topic__like-button"}}
     >
-      {{#if this.likeToggled}}
+      {{#if this.liked}}
         {{icon "heart"}}
       {{else}}
         {{icon "d-unliked"}}
