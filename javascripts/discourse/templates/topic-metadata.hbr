@@ -19,7 +19,10 @@
 
     {{#if (theme-setting 'show_likes')}}
       <span class="topic-card__likes item">
-        <LikeToggle @topic={{@topic}} />
+        {{d-icon "heart"}}
+        <span class="number">
+          {{view.topic.like_count}}
+        </span>
       </span>
     {{/if}}
 
