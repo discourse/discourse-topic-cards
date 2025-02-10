@@ -4,7 +4,7 @@ import { on } from "@ember/modifier";
 import { action } from "@ember/object";
 import { debounce } from "@ember/runloop";
 import { service } from "@ember/service";
-import { eq, notEq } from "truth-helpers";
+import { not } from "truth-helpers";
 import concatClass from "discourse/helpers/concat-class";
 import icon from "discourse/helpers/d-icon";
 import number from "discourse/helpers/number";
@@ -12,20 +12,23 @@ import { ajax } from "discourse/lib/ajax";
 import { i18n } from "discourse-i18n";
 
 export default class LikeToggle extends Component {
-  @service currentUser;
   @service dialog;
+
+  get canLike() {
+    return this.args.topic.op_can_like || false;
+  }
+
+  get firstPostId() {
+    return this.args.topic.first_post_id || false;
+  }
 
   @tracked likeCount = this.args.topic.like_count;
   @tracked liked = this.args.topic.op_liked || false;
-  @tracked canLike = this.args.topic.op_can_like || false;
-  @tracked firstPostId = this.args.topic.first_post_id || false;
   @tracked loading = false;
   clickCounter = 0;
 
   @action
   toggleLikeDebounced() {
-    event.stopPropagation();
-
     if (this.loading) {
       return;
     }
@@ -77,20 +80,16 @@ export default class LikeToggle extends Component {
     <button
       {{on "click" this.toggleLikeDebounced}}
       type="button"
-      disabled={{eq this.canLike false}}
+      disabled={{not this.canLike}}
       title={{if
-        (eq this.canLike false)
-        (i18n (themePrefix "like_toggle.like_disabled"))
+        (this.canLike)
         (i18n (themePrefix "like_toggle.like"))
+        (i18n (themePrefix "like_toggle.like_disabled"))
       }}
       class={{concatClass (if this.liked "--liked") "topic__like-button"}}
     >
-      {{#if this.liked}}
-        {{icon "heart"}}
-      {{else}}
-        {{icon "d-unliked"}}
-      {{/if}}
-      {{#if (notEq this.likeCount 0)}}
+      {{icon (if this.liked "heart" "d-unliked")}}
+      {{#if this.likeCount}}
         {{number this.likeCount}}
       {{/if}}
     </button>
