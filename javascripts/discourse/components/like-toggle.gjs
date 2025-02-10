@@ -14,6 +14,11 @@ import { i18n } from "discourse-i18n";
 export default class LikeToggle extends Component {
   @service dialog;
 
+  @tracked likeCount = this.args.topic.like_count;
+  @tracked liked = this.args.topic.op_liked || false;
+  @tracked loading = false;
+  clickCounter = 0;
+
   get canLike() {
     return this.args.topic.op_can_like || false;
   }
@@ -21,11 +26,6 @@ export default class LikeToggle extends Component {
   get firstPostId() {
     return this.args.topic.first_post_id || false;
   }
-
-  @tracked likeCount = this.args.topic.like_count;
-  @tracked liked = this.args.topic.op_liked || false;
-  @tracked loading = false;
-  clickCounter = 0;
 
   @action
   toggleLikeDebounced() {
