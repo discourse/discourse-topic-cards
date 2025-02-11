@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 zh_TW:
+  like_toggle:
+    like: "讚"

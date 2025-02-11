@@ -16,3 +16,5 @@ fi:
       set_card_max_height: "Aseta ketjukorttien enimmäiskorkeus. Jos korkeutta ei ole asetettu, kortit kasvavat kuvan hahmontamisen korkeuteen."
       card_max_height: "Ketjukorttien enimmäiskorkeus. Käytetään vain, jos set_card_max_height on tosi. Oletus on 275 pikseliä."
   published: "Julkaistu"
+  like_toggle:
+    like: "Tykkää"

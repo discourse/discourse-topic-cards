@@ -16,3 +16,5 @@ tr_TR:
       set_card_max_height: "Konu kartları için maksimum yüksekliği ayarlayın. Ayarlanmadığında, kartlar görüntü oluşturma yüksekliğine kadar büyür."
       card_max_height: "Konu kartları için maksimum yükseklik. Yalnızca set_card_max_height true ise kullanılır. Varsayılan 275 pikseldir."
   published: "Yayınlandı"
+  like_toggle:
+    like: "Beğen"

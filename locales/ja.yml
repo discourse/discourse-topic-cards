@@ -16,3 +16,5 @@ ja:
       set_card_max_height: "トピックカードの最大の高さを設定する。未設定の場合は、カードは画像レンダリングの高さまで拡大されます。"
       card_max_height: "トピックカードの最大の高さ。set_card_max_heigh が true の場合にのみ使用されます。デフォルトは 275px です。"
   published: "公開中"
+  like_toggle:
+    like: "いいね！"

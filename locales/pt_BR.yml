@@ -16,3 +16,5 @@ pt_BR:
       set_card_max_height: "Defina a altura máxima para cartões de tópico. Se esta configuração não for definida, os cartões terão a altura da imagem renderizada."
       card_max_height: "Altura máxima para cartões de tópico. Use apenas se set_card_max_height for verdadeiro. O padrão é 275 px."
   published: "Publicado(a)"
+  like_toggle:
+    like: "Curtir"

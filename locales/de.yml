@@ -16,3 +16,5 @@ de:
       set_card_max_height: "Lege die maximale Höhe für Themenkarten fest. Wenn nicht festgelegt, passen sich die Karten der Höhe des Bildes an."
       card_max_height: "Die maximale Höhe für die Themenkarten. Wird nur verwendet, wenn set_card_max_height aktiviert ist. Standardeinstellung beträgt 275 Pixel."
   published: "Veröffentlicht"
+  like_toggle:
+    like: "Gefällt mir"

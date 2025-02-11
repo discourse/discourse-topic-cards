@@ -7,3 +7,8 @@
 ro:
   theme_metadata:
     description: "O componentă Discourse pentru afișarea listei de subiecte în format card, cu miniaturi acolo unde sunt disponibile."
+  like_toggle:
+    like: "Apreciez"
+    like_disabled: "Nu poți aprecia acest articol."
+    cannot_like_topic: "Scuze, nu poți elimina această apreciere."
+    cannot_remove_like: "Scuze, nu poți aprecia acest subiect."

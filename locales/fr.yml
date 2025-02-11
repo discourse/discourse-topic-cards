@@ -16,3 +16,5 @@ fr:
       set_card_max_height: "Définir la hauteur maximale pour les cartes de sujets. Si elle n'est pas définie, la taille des cartes augmentera jusqu'à la hauteur du rendu de l'image."
       card_max_height: "La hauteur maximale pour les cartes de sujets. Option utilisée uniquement si la valeur set_card_max_height est vraie. La valeur par défaut est de 275px."
   published: "Publié"
+  like_toggle:
+    like: "J'aime"

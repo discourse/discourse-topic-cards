@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 nb_NO:
+  like_toggle:
+    like: "Lik"

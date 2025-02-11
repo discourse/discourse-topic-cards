@@ -16,3 +16,5 @@ it:
       set_card_max_height: "Imposta l'altezza massima per le schede argomento. Se non è impostata, le schede avranno l'altezza del rendering dell'immagine."
       card_max_height: "L'altezza massima per le schede argomento. Utilizzato solo se set_card_max_height è true. Il valore predefinito è 275px."
   published: "Pubblicato"
+  like_toggle:
+    like: "Mi piace"

@@ -16,3 +16,5 @@ nl:
       set_card_max_height: "Stel de maximale hoogte in voor de topickaarten. Als deze niet is ingesteld, groeien de kaarten tot de hoogte van de beeldweergave."
       card_max_height: "De maximale hoogte voor de topickaarten. Wordt alleen gebruikt als set_card_max_height waar is. Standaard is dit 275 pixels."
   published: "Gepubliceerd"
+  like_toggle:
+    like: "Liken"

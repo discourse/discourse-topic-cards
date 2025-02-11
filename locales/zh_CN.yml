@@ -16,3 +16,5 @@ zh_CN:
       set_card_max_height: "设置话题卡片的最大高度。如果不设置，卡片将增长到图片渲染的高度。"
       card_max_height: "话题卡片的最大高度。仅当 set_card_max_height 为真时才能使用。默认值为 275px。"
   published: "发布日期"
+  like_toggle:
+    like: "点赞"

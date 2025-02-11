@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 be:
+  like_toggle:
+    like: "Падабайка"

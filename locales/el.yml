@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 el:
+  like_toggle:
+    like: "Σας αρέσει"

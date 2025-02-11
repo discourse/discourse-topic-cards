@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 pl_PL:
+  like_toggle:
+    like: "Polub"

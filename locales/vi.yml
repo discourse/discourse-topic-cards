@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 vi:
+  like_toggle:
+    like: "Thích"

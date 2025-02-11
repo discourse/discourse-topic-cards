@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 bs_BA:
+  like_toggle:
+    like: "Like"

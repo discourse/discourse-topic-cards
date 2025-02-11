@@ -16,3 +16,5 @@ es:
       set_card_max_height: "Establece la altura máxima de las tarjetas del tema. Si no se establece, las tarjetas crecerán hasta la altura de la representación de la imagen."
       card_max_height: "La altura máxima de las tarjetas del tema. Solo se utiliza si set_card_max_height es true. Por defecto es 275px."
   published: "Publicado"
+  like_toggle:
+    like: "Me gusta"
