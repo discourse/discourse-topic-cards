@@ -1,9 +1,3 @@
-# WARNING: Never edit this file.
-# It will be overwritten when translations are pulled from Crowdin.
-#
-# To work with us on translations, join this project:
-# https://translate.discourse.org/
-
 nl:
   theme_metadata:
     description: "Een Discourse-component om de topicslijst in kaartformaat weer te geven, met miniaturen waar beschikbaar."
