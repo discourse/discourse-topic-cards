@@ -18,3 +18,6 @@ he:
   published: "מפורסם"
   like_toggle:
     like: "לייק"
+    like_disabled: "אי אפשר לסמן לייק על הפוסט הזה."
+    cannot_like_topic: "אין לך הרשאה להסיר את הלייק הזה, סליחה."
+    cannot_remove_like: "אין לך הרשאה לסמן לייק על הנושא הזה, סליחה."
