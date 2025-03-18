@@ -1,13 +1,13 @@
 import EmberObject from "@ember/object";
 import discourseComputed from "discourse/lib/decorators";
 
-export default EmberObject.extend({
-  responsiveRatios: [1, 1.5, 2],
+export default class TopicThumbnail extends EmberObject {
+  responsiveRatios = [1, 1.5, 2];
 
   @discourseComputed("topic.thumbnails")
   hasThumbnail(thumbnails) {
     return !!thumbnails;
-  },
+  }
 
   @discourseComputed("topic.thumbnails", "displayWidth")
   srcSet(thumbnails, displayWidth) {
@@ -26,25 +26,27 @@ export default EmberObject.extend({
     }
 
     return srcSetArray.join(",");
-  },
+  }
 
   @discourseComputed("topic.thumbnails")
   original(thumbnails) {
     return thumbnails[0];
-  },
+  }
 
   @discourseComputed("original")
   width(original) {
     return original.width;
-  },
+  }
+
   @discourseComputed("original")
   isLandscape(original) {
     return original.width >= original.height;
-  },
+  }
+
   @discourseComputed("original")
   height(original) {
     return original.height;
-  },
+  }
 
   @discourseComputed("topic.thumbnails")
   fallbackSrc(thumbnails) {
@@ -60,12 +62,12 @@ export default EmberObject.extend({
     }
 
     return this.original.url;
-  },
+  }
 
   @discourseComputed("topic")
   url(topic) {
     return topic.linked_post_number
       ? topic.urlForPostNumber(topic.linked_post_number)
       : topic.get("lastUnreadUrl");
-  },
-});
+  }
+}

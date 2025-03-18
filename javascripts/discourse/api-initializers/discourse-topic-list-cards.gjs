@@ -70,11 +70,14 @@ export default apiInitializer("1.39.0", (api) => {
 
 // TODO: (discourse.hbr-topic-list-overrides) remove the customizations below after the legacy topic list is removed from core
 function applyLegacyCustomizations(api, classNames, site) {
-  api.renderInOutlet("above-site-header", <template>
-    {{#if (eq site.useGlimmerTopicList false)}}
-      {{bodyClass "hbr-topic-list__topic-cards"}}
-    {{/if}}
-  </template>);
+  api.renderInOutlet(
+    "above-site-header",
+    <template>
+      {{#if (eq site.useGlimmerTopicList false)}}
+        {{bodyClass "hbr-topic-list__topic-cards"}}
+      {{/if}}
+    </template>
+  );
 
   withSilencedDeprecations("discourse.hbr-topic-list-overrides", () => {
     api.modifyClass("component:topic-list", {

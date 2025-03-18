@@ -1,7 +1,8 @@
 :root {
   --d-border-radius-large: 20px;
 }
-//list
+
+// list
 .topic-cards-list {
   display: block;
   margin-top: 1.5rem;
@@ -16,6 +17,7 @@
     width: 100%;
     gap: 1em;
     border-top: 0;
+
     .after-topic-list-item-outlet {
       border: 0;
     }
@@ -26,7 +28,7 @@
   }
 }
 
-//card
+// card
 .topic-card {
   display: flex;
   gap: 1.5rem;
@@ -57,7 +59,7 @@
     }
   }
 
-  //hiding core elements
+  // hiding core elements
   .num {
     &.posts,
     &.views,
@@ -71,11 +73,12 @@
     display: none;
   }
 
-  //new elements styling
+  // new elements styling
   &__thumbnail {
     flex: 0 0 30%;
     max-width: 450px;
     max-height: 100%;
+
     .main-thumbnail {
       height: 100%;
       width: 100%;
@@ -100,13 +103,14 @@
     box-shadow: none !important;
 
     .topic-excerpt {
-      display: none; //hide default excerpt from pinned topics
+      display: none; // hide default excerpt from pinned topics
     }
 
     .link-top-line {
       grid-area: title;
       display: flex;
       align-items: center;
+
       &:hover {
         text-decoration: underline;
       }
@@ -114,14 +118,15 @@
 
     .title {
       font-weight: bold;
-      //limit title to 2 lines
+
+      // limit title to 2 lines
       line-height: 1.4em;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
-      max-height: 2.8em; //calc((var(--line-height-large) * 2) em;
+      max-height: 2.8em; // calc((var(--line-height-large) * 2) em;
       padding: 0 !important;
     }
 
@@ -135,65 +140,75 @@
     }
 
     .topic-card {
-      &.selected {
-        //j-k box shadow reimplement
-      }
       &__category {
         grid-area: category;
       }
+
       &__op {
         grid-area: op;
         font-size: var(--font-down-1-rem);
       }
+
       &__metadata {
         grid-area: metadata;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         .number,
         .d-icon,
         .activity a {
           font-weight: bold;
           font-size: var(--font-down-1-rem);
         }
+
         .right-aligned {
           margin-left: auto;
           display: flex;
           justify-content: space-between;
           align-items: center;
+
           .item {
             flex-grow: 0;
             flex-shrink: 1;
-            margin-left: 20px; /* Adjust as necessary for spacing */
+            margin-left: 20px; // Adjust as necessary for spacing
           }
         }
+
         .topic__like-button {
           background-color: transparent;
           border: none;
           border-radius: 4px;
           transition: all 200ms ease-in-out;
+
           .d-icon {
             color: var(--primary-medium);
           }
+
           &:hover {
             background-color: var(--love-low);
             color: var(--love);
+
             .d-icon {
               color: var(--love);
             }
           }
+
           &.--liked {
             .d-icon {
               animation: like-toggle 200ms ease-in-out;
               color: var(--love);
             }
           }
+
           &:disabled {
             cursor: not-allowed;
+
             &:hover {
               background-color: unset;
               color: unset;
             }
+
             &:hover:not(.--liked) {
               .d-icon {
                 color: unset;
@@ -202,15 +217,19 @@
           }
         }
       }
+
       &__publish-date {
         font-size: var(--font-down-1-rem);
       }
+
       &__excerpt {
         grid-area: excerpt;
       }
+
       &__excerpt-text {
         margin-block: 0.5rem 1rem;
-        //limit title to 2 lines
+
+        // limit title to 2 lines
         line-height: 1.1em;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -219,6 +238,7 @@
         -webkit-box-orient: vertical;
         max-height: 3.3em;
       }
+
       &__activity {
         .num.activity {
           display: block;
@@ -237,6 +257,7 @@
 .topic-list .age,
 .topic-list .activity {
   width: inherit;
+
   a {
     color: inherit;
   }
@@ -246,9 +267,11 @@
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.4);
   }
+
   100% {
     transform: scale(1);
   }
