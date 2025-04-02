@@ -3,7 +3,7 @@ import { eq } from "truth-helpers";
 import bodyClass from "discourse/helpers/body-class";
 import { apiInitializer } from "discourse/lib/api";
 import { withSilencedDeprecations } from "discourse/lib/deprecated";
-import ClickableTopicCard from "../components/clickable-topic-card";
+import { wantsNewWindow } from "discourse/lib/intercept-click";
 import TopicExcerpt from "../components/topic-excerpt";
 import TopicMetadata from "../components/topic-metadata";
 import TopicOp from "../components/topic-op";
@@ -13,7 +13,6 @@ import TopicThumbnail from "../components/topic-thumbnail";
 export default apiInitializer("1.39.0", (api) => {
   const site = api.container.lookup("service:site");
 
-  api.renderInOutlet("above-topic-list-item", ClickableTopicCard);
   api.renderInOutlet(
     "topic-list-main-link-bottom",
     class extends Component {
@@ -64,6 +63,38 @@ export default apiInitializer("1.39.0", (api) => {
 
     return columns;
   });
+
+  api.registerBehaviorTransformer(
+    "topic-list-item-click",
+    ({ context, next }) => {
+      const targetElement = context.event.target;
+      const topic = context.topic;
+
+      const clickTargets = [
+        "topic-list-data",
+        "link-bottom-line",
+        "topic-list-item",
+        "topic-card__excerpt",
+        "topic-card__excerpt-text",
+        "topic-card__metadata",
+        "topic-card__likes",
+        "topic-card__op",
+      ];
+
+      if (site.mobileView) {
+        clickTargets.push("topic-item-metadata");
+      }
+
+      if (clickTargets.some((t) => targetElement.closest(`.${t}`))) {
+        if (wantsNewWindow(event)) {
+          return true;
+        }
+        return context.navigateToTopic(topic, topic.lastUnreadUrl);
+      }
+
+      next();
+    }
+  );
 
   applyLegacyCustomizations(api, classNames, site);
 });
