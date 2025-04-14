@@ -1,8 +1,5 @@
 import Component from "@glimmer/component";
-import { eq } from "truth-helpers";
-import bodyClass from "discourse/helpers/body-class";
 import { apiInitializer } from "discourse/lib/api";
-import { withSilencedDeprecations } from "discourse/lib/deprecated";
 import { wantsNewWindow } from "discourse/lib/intercept-click";
 import TopicExcerpt from "../components/topic-excerpt";
 import TopicMetadata from "../components/topic-metadata";
@@ -95,29 +92,4 @@ export default apiInitializer("1.39.0", (api) => {
       next();
     }
   );
-
-  applyLegacyCustomizations(api, classNames, site);
 });
-
-// TODO: (discourse.hbr-topic-list-overrides) remove the customizations below after the legacy topic list is removed from core
-function applyLegacyCustomizations(api, classNames, site) {
-  api.renderInOutlet(
-    "above-site-header",
-    <template>
-      {{#if (eq site.useGlimmerTopicList false)}}
-        {{bodyClass "hbr-topic-list__topic-cards"}}
-      {{/if}}
-    </template>
-  );
-
-  withSilencedDeprecations("discourse.hbr-topic-list-overrides", () => {
-    api.modifyClass("component:topic-list", {
-      pluginId: "discourse-topic-list-cards",
-      classNames: "topic-cards-list",
-    });
-    api.modifyClass("component:topic-list-item", {
-      pluginId: "discourse-topic-list-cards",
-      classNames: classNames.join(" "),
-    });
-  });
-}
