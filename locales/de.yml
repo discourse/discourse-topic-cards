@@ -18,3 +18,6 @@ de:
   published: "Veröffentlicht"
   like_toggle:
     like: "Gefällt mir"
+    like_disabled: "Du kannst kein „Gefällt mir“ für diesen Beitrag vergeben."
+    cannot_like_topic: "Entschuldige, du kannst dieses „Gefällt mir“ nicht entfernen."
+    cannot_remove_like: "Du kannst kein „Gefällt mir“ für dieses Thema vergeben."
