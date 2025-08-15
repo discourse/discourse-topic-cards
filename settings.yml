@@ -19,3 +19,10 @@ set_card_max_height:
 card_max_height:
   type: integer
   default: 275
+show_on_categories:
+  type: list
+  list_type: category
+  default: ""
+show_for_suggested_topics:
+  type: bool
+  default: true

@@ -9,6 +9,8 @@ en:
       show_publish_date: "Show publish date on topic card"
       set_card_max_height: "Set max height for the topic cards. If unset, the cards will grow to the height of the image rendering."
       card_max_height: "The maximum height for the topic cards. Only used if set_card_max_height is true. Default is 275px."
+      show_on_categories: "Show topic cards on these categories. If empty, show topic cards everywhere."
+      show_for_suggested_topics: "Show topic cards for suggested topics"
   published: "Published"
   like_toggle:
     like: "Like"
