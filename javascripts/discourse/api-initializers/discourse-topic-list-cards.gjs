@@ -13,11 +13,11 @@ export default apiInitializer("1.39.0", (api) => {
 
   function enableCards()
   {
-    if (router.currentRouteName == "topic.fromParamsNear") {
+    if (router.currentRouteName === "topic.fromParamsNear") {
       return settings.show_for_suggested_topics;
     }
 
-    if (settings.show_on_categories?.length == 0) {
+    if (settings.show_on_categories?.length === 0) {
       return true; // no categories set, so enable cards by default
     }
     const currentCat = router.currentRoute?.attributes?.category?.id;
@@ -48,7 +48,7 @@ export default apiInitializer("1.39.0", (api) => {
     "topic-list-class",
     ({ value: additionalClasses }) => {
       if (enableCards()) {
-        additionalClasses.push("topic-cards-list")
+        additionalClasses.push("topic-cards-list");
       }
       return additionalClasses;
     }
@@ -66,7 +66,9 @@ export default apiInitializer("1.39.0", (api) => {
       if (enableCards()) {
         return [...additionalClasses, ...classNames];
       }
-      else return additionalClasses;
+      else {
+        return additionalClasses;
+      }
     }
   );
 
