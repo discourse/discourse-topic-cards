@@ -11,8 +11,7 @@ export default apiInitializer("1.39.0", (api) => {
   const site = api.container.lookup("service:site");
   const router = api.container.lookup("service:router");
 
-  function enableCards()
-  {
+  function enableCards() {
     if (router.currentRouteName === "topic.fromParamsNear") {
       return settings.show_for_suggested_topics;
     }
@@ -31,9 +30,11 @@ export default apiInitializer("1.39.0", (api) => {
   api.renderInOutlet(
     "topic-list-main-link-bottom",
     class extends Component {
-
       static shouldRender(args, context) {
-        return context.siteSettings.glimmer_topic_list_mode !== "disabled" && enableCards();
+        return (
+          context.siteSettings.glimmer_topic_list_mode !== "disabled" &&
+          enableCards()
+        );
       }
 
       <template>
@@ -65,8 +66,7 @@ export default apiInitializer("1.39.0", (api) => {
     ({ value: additionalClasses }) => {
       if (enableCards()) {
         return [...additionalClasses, ...classNames];
-      }
-      else {
+      } else {
         return additionalClasses;
       }
     }
@@ -116,7 +116,6 @@ export default apiInitializer("1.39.0", (api) => {
           }
           return context.navigateToTopic(topic, topic.lastUnreadUrl);
         }
-
       }
 
       next();
