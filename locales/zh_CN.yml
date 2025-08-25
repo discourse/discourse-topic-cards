@@ -18,3 +18,6 @@ zh_CN:
   published: "发布日期"
   like_toggle:
     like: "点赞"
+    like_disabled: "您不能点赞此帖子。"
+    cannot_like_topic: "抱歉，您无法移除该赞。"
+    cannot_remove_like: "抱歉，您无法点赞该话题。"
