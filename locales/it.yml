@@ -18,3 +18,6 @@ it:
   published: "Pubblicato"
   like_toggle:
     like: "Mi piace"
+    like_disabled: "Non puoi mettere Mi piace a questo post."
+    cannot_like_topic: "Spiacenti, non puoi rimuovere quel Mi piace."
+    cannot_remove_like: "Spiacenti, non puoi mettere Mi piace a questo argomento."

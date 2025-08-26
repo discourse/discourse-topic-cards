@@ -18,3 +18,6 @@ es:
   published: "Publicado"
   like_toggle:
     like: "Me gusta"
+    like_disabled: "No puedes darle me gusta a esta publicación."
+    cannot_like_topic: "Lo sentimos, pero no puedes eliminar ese me gusta."
+    cannot_remove_like: "Lo sentimos, pero no puedes dar me gusta a este tema."
