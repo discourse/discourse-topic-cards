@@ -18,3 +18,6 @@ ja:
   published: "公開中"
   like_toggle:
     like: "いいね！"
+    like_disabled: "この投稿に「いいね！」できません。"
+    cannot_like_topic: "その「いいね！」を削除できません。"
+    cannot_remove_like: "そのトピックを「いいね！」できません。"

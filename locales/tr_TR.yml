@@ -18,3 +18,6 @@ tr_TR:
   published: "Yayınlandı"
   like_toggle:
     like: "Beğen"
+    like_disabled: "Bu gönderiyi beğenemezsiniz."
+    cannot_like_topic: "Üzgünüz, bu beğeniyi kaldıramazsınız."
+    cannot_remove_like: "Üzgünüz, bu konuyu beğenemezsiniz."
