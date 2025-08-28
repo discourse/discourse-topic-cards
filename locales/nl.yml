@@ -18,3 +18,6 @@ nl:
   published: "Gepubliceerd"
   like_toggle:
     like: "Liken"
+    like_disabled: "Je kunt dit bericht niet liken."
+    cannot_like_topic: "Je kunt die like niet verwijderen."
+    cannot_remove_like: "Je kunt dat topic niet verwijderen."
