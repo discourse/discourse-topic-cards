@@ -72,7 +72,13 @@ export default apiInitializer("1.39.0", (api) => {
     }
   );
 
-  api.registerValueTransformer("topic-list-item-mobile-layout", () => false);
+  api.registerValueTransformer("topic-list-item-mobile-layout", ({ value }) => {
+    if (enableCards()) {
+      return false;
+    }
+    return value;
+  });
+
   api.registerValueTransformer("topic-list-columns", ({ value: columns }) => {
     if (enableCards()) {
       columns.add("thumbnail", { item: TopicThumbnail }, { before: "topic" });
