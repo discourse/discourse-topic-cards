@@ -7,7 +7,7 @@ import TopicOp from "../components/topic-op";
 import TopicTagsMobile from "../components/topic-tags-mobile";
 import TopicThumbnail from "../components/topic-thumbnail";
 
-export default apiInitializer("1.39.0", (api) => {
+export default apiInitializer((api) => {
   const site = api.container.lookup("service:site");
   const router = api.container.lookup("service:router");
 
