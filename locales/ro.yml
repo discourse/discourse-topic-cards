@@ -7,6 +7,9 @@
 ro:
   theme_metadata:
     description: "O componentă Discourse pentru afișarea listei de subiecte în format card, cu miniaturi acolo unde sunt disponibile."
+    settings:
+      show_on_categories: "Arată cardurile subiectelor în aceste categorii. Dacă este gol, arată peste tot cardurile cu subiecte."
+      show_for_suggested_topics: "Arată cardurile subiectelor pentru subiectele sugerate"
   like_toggle:
     like: "Apreciez"
     like_disabled: "Nu poți aprecia acest articol."
