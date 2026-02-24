@@ -15,6 +15,8 @@ ja:
       show_publish_date: "トピックカードに公開日を表示する"
       set_card_max_height: "トピックカードの最大の高さを設定する。未設定の場合は、カードは画像レンダリングの高さまで拡大されます。"
       card_max_height: "トピックカードの最大の高さ。set_card_max_heigh が true の場合にのみ使用されます。デフォルトは 275px です。"
+      show_on_categories: "これらのカテゴリでトピックカードを表示する。空白の場合、すべての場所にトピックカードが表示されます。"
+      show_for_suggested_topics: "推奨トピックのトピックカードを表示する"
   published: "公開中"
   like_toggle:
     like: "いいね！"

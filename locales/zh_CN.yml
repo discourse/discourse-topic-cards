@@ -15,6 +15,8 @@ zh_CN:
       show_publish_date: "在话题卡片上显示发布日期"
       set_card_max_height: "设置话题卡片的最大高度。如果不设置，卡片将增长到图片渲染的高度。"
       card_max_height: "话题卡片的最大高度。仅当 set_card_max_height 为真时才能使用。默认值为 275px。"
+      show_on_categories: "显示这些类别的话题卡片。如果为空，则显示所有类别的话题卡片。"
+      show_for_suggested_topics: "显示建议话题的话题卡片"
   published: "发布日期"
   like_toggle:
     like: "点赞"
