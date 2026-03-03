@@ -15,6 +15,8 @@ tr_TR:
       show_publish_date: "Konu kartındaki yayın tarihini göster"
       set_card_max_height: "Konu kartları için maksimum yüksekliği ayarlayın. Ayarlanmadığında, kartlar görüntü oluşturma yüksekliğine kadar büyür."
       card_max_height: "Konu kartları için maksimum yükseklik. Yalnızca set_card_max_height true ise kullanılır. Varsayılan 275 pikseldir."
+      show_on_categories: "Bu kategorilerdeki konu kartlarını göster. Boşsa, her yerde konu kartlarını göster."
+      show_for_suggested_topics: "Önerilen konular için konu kartlarını göster"
   published: "Yayınlandı"
   like_toggle:
     like: "Beğen"
