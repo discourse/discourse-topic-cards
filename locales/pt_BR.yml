@@ -15,6 +15,8 @@ pt_BR:
       show_publish_date: "Exibir data de publicação no cartão do tópico"
       set_card_max_height: "Defina a altura máxima para cartões de tópico. Se esta configuração não for definida, os cartões terão a altura da imagem renderizada."
       card_max_height: "Altura máxima para cartões de tópico. Use apenas se set_card_max_height for verdadeiro. O padrão é 275 px."
+      show_on_categories: "Mostrar cartões de tópico nessas categorias. Se vazias, mostrar os cartões de tópico em todas as categorias."
+      show_for_suggested_topics: "Mostrar cartões de tópicos para tópicos sugeridos"
   published: "Publicado(a)"
   like_toggle:
     like: "Curtir"
