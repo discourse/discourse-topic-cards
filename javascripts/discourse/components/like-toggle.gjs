@@ -4,27 +4,24 @@ import { on } from "@ember/modifier";
 import { action } from "@ember/object";
 import { debounce } from "@ember/runloop";
 import { service } from "@ember/service";
-import { not } from "truth-helpers";
+import { resettableTracked } from "discourse/declarations/app/lib/tracked-tools";
 import concatClass from "discourse/helpers/concat-class";
 import icon from "discourse/helpers/d-icon";
 import number from "discourse/helpers/number";
 import { ajax } from "discourse/lib/ajax";
+import { not } from "discourse/truth-helpers";
 import { i18n } from "discourse-i18n";
 
 export default class LikeToggle extends Component {
   @service dialog;
 
-  @tracked likeCount = this.args.topic.like_count;
-  @tracked liked = this.args.topic.op_liked || false;
+  @tracked liked = !!this.args.topic.op_liked;
   @tracked loading = false;
+  @resettableTracked likeCount = this.args.topic.like_count;
   clickCounter = 0;
 
-  get canLike() {
-    return this.args.topic.op_can_like || false;
-  }
-
   get firstPostId() {
-    return this.args.topic.first_post_id || false;
+    return !!this.args.topic.first_post_id;
   }
 
   @action
@@ -82,7 +79,7 @@ export default class LikeToggle extends Component {
       type="button"
       disabled={{not this.canLike}}
       title={{if
-        (this.canLike)
+        @topic.op_can_like
         (i18n (themePrefix "like_toggle.like"))
         (i18n (themePrefix "like_toggle.like_disabled"))
       }}
