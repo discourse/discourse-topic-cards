@@ -15,6 +15,8 @@ nl:
       show_publish_date: "Publicatiedatum weergeven op topickaart"
       set_card_max_height: "Stel de maximale hoogte in voor de topickaarten. Als deze niet is ingesteld, groeien de kaarten tot de hoogte van de beeldweergave."
       card_max_height: "De maximale hoogte voor de topickaarten. Wordt alleen gebruikt als set_card_max_height waar is. Standaard is dit 275 pixels."
+      show_on_categories: "Toon topickaarten in deze categorieën. Indien leeg, toon dan overal topickaarten."
+      show_for_suggested_topics: "Themakaarten tonen voor uitgelichte topics"
   published: "Gepubliceerd"
   like_toggle:
     like: "Liken"
