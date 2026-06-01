@@ -21,7 +21,7 @@ export default class LikeToggle extends Component {
   clickCounter = 0;
 
   get firstPostId() {
-    return !!this.args.topic.first_post_id;
+    return this.args.topic.first_post_id || false;
   }
 
   @action
@@ -77,7 +77,7 @@ export default class LikeToggle extends Component {
     <button
       {{on "click" this.toggleLikeDebounced}}
       type="button"
-      disabled={{not this.canLike}}
+      disabled={{not @topic.op_can_like}}
       title={{if
         @topic.op_can_like
         (i18n (themePrefix "like_toggle.like"))
