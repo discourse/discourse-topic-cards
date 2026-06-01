@@ -1,5 +1,6 @@
 import ActivityCell from "discourse/components/topic-list/item/activity-cell";
-import dIcon from "discourse/helpers/d-icon";
+import RepliesCell from "discourse/components/topic-list/item/replies-cell";
+import ViewsCell from "discourse/components/topic-list/item/views-cell";
 import formatDate from "discourse/helpers/format-date";
 import { i18n } from "discourse-i18n";
 import LikeToggle from "./like-toggle";
@@ -14,35 +15,27 @@ const TopicMetadata = <template>
     {{/if}}
 
     <div class="right-aligned">
-      {{#if settings.show_views}}
-        <span class="topic-card__views item">
-          {{dIcon "eye"}}
-          <span class="number">
-            {{@topic.views}}
-          </span>
-        </span>
-      {{/if}}
+      <table class="topic-card__stats">
+        <tr>
+          {{#if settings.show_views}}
+            <ViewsCell @topic={{@topic}} />
+          {{/if}}
 
-      {{#if settings.show_likes}}
-        <span class="topic-card__likes item">
-          <LikeToggle @topic={{@topic}} />
-        </span>
-      {{/if}}
+          {{#if settings.show_likes}}
+            <td class="num topic-list-data topic-card__likes">
+              <LikeToggle @topic={{@topic}} />
+            </td>
+          {{/if}}
 
-      {{#if settings.show_reply_count}}
-        <span class="topic-card__reply_count item">
-          {{dIcon "comment"}}
-          <span class="number">
-            {{@topic.replyCount}}
-          </span>
-        </span>
-      {{/if}}
+          {{#if settings.show_reply_count}}
+            <RepliesCell @topic={{@topic}} />
+          {{/if}}
 
-      {{#if settings.show_activity}}
-        <div class="topic-card__activity item">
-          <ActivityCell @topic={{@topic}} />
-        </div>
-      {{/if}}
+          {{#if settings.show_activity}}
+            <ActivityCell @topic={{@topic}} />
+          {{/if}}
+        </tr>
+      </table>
     </div>
   </div>
 </template>;

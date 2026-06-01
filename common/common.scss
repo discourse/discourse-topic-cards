@@ -28,6 +28,10 @@
   }
 }
 
+.topic-cards-icon {
+  display: none; // for non-topic-card views, suppress the icons injected via the topic-list-before-XXX-count outlets
+}
+
 // card
 .topic-card {
   display: flex;
@@ -36,6 +40,10 @@
   background-color: var(--secondary);
   box-shadow: var(--shadow-card);
   border: 1px solid transparent;
+
+  .topic-cards-icon {
+    display: inline-block;
+  }
 
   &:hover,
   &.selected {
@@ -71,6 +79,24 @@
   .posters,
   &__tags {
     display: none;
+  }
+
+  .topic-card__stats {
+    tr {
+      border-bottom: none;
+    }
+    td.num {
+      padding: 0 0 0 20px;
+      &.posts,
+      &.views,
+      &.activity {
+        display: table-cell;
+        width: auto;
+        a {
+          padding: 0;
+        }
+      }
+    }
   }
 
   // new elements styling
