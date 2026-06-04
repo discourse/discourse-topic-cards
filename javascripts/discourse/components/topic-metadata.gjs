@@ -16,25 +16,27 @@ const TopicMetadata = <template>
 
     <div class="right-aligned">
       <table class="topic-card__stats">
-        <tr>
-          {{#if settings.show_views}}
-            <ViewsCell @topic={{@topic}} />
-          {{/if}}
+        <tbody>
+          <tr>
+            {{#if settings.show_views}}
+              <ViewsCell @topic={{@topic}} />
+            {{/if}}
 
-          {{#if settings.show_likes}}
-            <td class="num topic-list-data topic-card__likes">
-              <LikeToggle @topic={{@topic}} />
-            </td>
-          {{/if}}
+            {{#if settings.show_likes}}
+              <td class="num topic-list-data topic-card__likes">
+                <LikeToggle @topic={{@topic}} />
+              </td>
+            {{/if}}
 
-          {{#if settings.show_reply_count}}
-            <RepliesCell @topic={{@topic}} />
-          {{/if}}
+            {{#if settings.show_reply_count}}
+              <RepliesCell @topic={{@topic}} />
+            {{/if}}
 
-          {{#if settings.show_activity}}
-            <ActivityCell @topic={{@topic}} />
-          {{/if}}
-        </tr>
+            {{#if settings.show_activity}}
+              <ActivityCell @topic={{@topic}} />
+            {{/if}}
+          </tr>
+        </tbody>
       </table>
     </div>
   </div>

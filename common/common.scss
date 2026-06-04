@@ -85,13 +85,16 @@
     tr {
       border-bottom: none;
     }
+
     td.num {
       padding: 0 0 0 20px;
+
       &.posts,
       &.views,
       &.activity {
         display: table-cell;
         width: auto;
+
         a {
           padding: 0;
         }
