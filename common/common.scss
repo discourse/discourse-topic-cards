@@ -82,6 +82,10 @@
   }
 
   .topic-card__stats {
+    tbody {
+      border: none;
+    }
+
     tr {
       border-bottom: none;
     }
