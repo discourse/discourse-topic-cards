@@ -200,12 +200,6 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-
-          .item {
-            flex-grow: 0;
-            flex-shrink: 1;
-            margin-left: 20px; // Adjust as necessary for spacing
-          }
         }
 
         .topic__like-button {
