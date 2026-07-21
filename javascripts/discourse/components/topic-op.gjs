@@ -1,15 +1,27 @@
+import Component from "@glimmer/component";
 import UserLink from "discourse/components/user-link";
 import avatar from "discourse/helpers/avatar";
+import { prioritizeNameInUx } from "discourse/lib/settings";
 
-const TopicOp = <template>
-  <div class="topic-card__op">
-    <UserLink @user={{@topic.creator}}>
-      {{avatar @topic.creator imageSize="tiny"}}
-      <span class="username">
-        {{@topic.creator.username}}
-      </span>
-    </UserLink>
-  </div>
-</template>;
+export default class TopicOp extends Component {
+  get creatorName() {
+    const creator = this.args.topic.creator;
 
-export default TopicOp;
+    if (prioritizeNameInUx(creator?.name)) {
+      return creator.name;
+    }
+
+    return creator?.username;
+  }
+
+  <template>
+    <div class="topic-card__op">
+      <UserLink @user={{@topic.creator}}>
+        {{avatar @topic.creator imageSize="tiny"}}
+        <span class="username">
+          {{this.creatorName}}
+        </span>
+      </UserLink>
+    </div>
+  </template>
+}
