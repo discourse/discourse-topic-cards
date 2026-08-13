@@ -117,9 +117,10 @@ export default apiInitializer((api) => {
         }
 
         if (clickTargets.some((t) => targetElement.closest(`.${t}`))) {
-          if (wantsNewWindow(event)) {
+          if (wantsNewWindow(context.event)) {
             return true;
           }
+          context.event.preventDefault();
           return context.navigateToTopic(topic, topic.lastUnreadUrl);
         }
       }
