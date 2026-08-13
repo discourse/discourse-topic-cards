@@ -2,9 +2,8 @@
 
 RSpec.describe "Clicking a topic card" do
   fab!(:theme) { upload_theme_component }
-  fab!(:post_with_long_raw_content)
+  fab!(:topic) { Fabricate(:post).topic }
 
-  let(:topic) { post_with_long_raw_content.topic }
   let(:discovery) { PageObjects::Pages::Discovery.new }
   let(:topic_page) { PageObjects::Pages::Topic.new }
 
@@ -17,8 +16,10 @@ RSpec.describe "Clicking a topic card" do
   end
 
   before do
+    topic.update!(excerpt: "A card excerpt that is big enough to click on")
+
     visit "/latest"
-    expect(page).to have_css(".topic-cards-list .topic-card__excerpt-text")
+    expect(page).to have_css(".topic-cards-list .topic-card__excerpt-text", text: topic.excerpt)
     mark_page
   end
 
