@@ -8,16 +8,18 @@ fr:
   theme_metadata:
     description: "Un composant de Discourse pour afficher la liste des sujets au format carte, avec des vignettes lorsqu'elles sont disponibles."
     settings:
-      show_likes: "Afficher les mentions « J'aime » sur la carte du sujet"
+      show_likes: "Afficher les mentions « J'aime » sur la carte du sujet"
       show_views: "Afficher les vues sur la carte du sujet"
       show_reply_count: "Afficher le nombre de réponses sur la carte du sujet"
       show_activity: "Afficher l'activité sur la carte du sujet"
       show_publish_date: "Afficher la date de publication sur la carte du sujet"
-      set_card_max_height: "Définir la hauteur maximale pour les cartes de sujets. Si elle n'est pas définie, la taille des cartes augmentera jusqu'à la hauteur du rendu de l'image."
-      card_max_height: "La hauteur maximale pour les cartes de sujets. Option utilisée uniquement si la valeur set_card_max_height est vraie. La valeur par défaut est de 275px."
+      set_card_max_height: "Définir la hauteur maximale pour les cartes de sujets. Si elle n'est pas définie, la hauteur des cartes s'adaptera à celle de l'image."
+      card_max_height: "La hauteur maximale des cartes de sujets. Option utilisée uniquement si le paramètre set_card_max_height est activé. La valeur par défaut est de 275 px."
+      show_on_categories: "Afficher les cartes de sujets dans ces catégories. Si aucune catégorie n'est sélectionnée, les afficher partout."
+      show_for_suggested_topics: "Afficher les cartes des sujets suggérés"
   published: "Publié"
   like_toggle:
     like: "J'aime"
     like_disabled: "Vous ne pouvez pas aimer cette publication."
-    cannot_like_topic: "Vous ne pouvez pas supprimer cette mention J'aime."
-    cannot_remove_like: "Vous ne pouvez pas ajouter de mention J'aime à ce sujet."
+    cannot_like_topic: "Vous ne pouvez pas supprimer cette mention « J'aime »."
+    cannot_remove_like: "Vous ne pouvez pas ajouter de mention « J'aime » à ce sujet."
